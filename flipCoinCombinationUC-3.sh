@@ -6,22 +6,22 @@ heads=1
 tails=0
 
 function winHead() {
-	percent=$((($headwin*100)/$i))
+	percent=`awk "BEGIN {print $(($headwin*100))/$i}"`
 	echo "HH Win Percent is : " $percent
 }
 
 function winTail() {
-	percent=$((($tailwin*100)/$i))
+	percent=`awk "BEGIN {print $(($tailwin*100))/$i}"`
 	echo "TT Win Percent is : " $percent
 }
 
 function winHeadTail() {
-        percent=$((($headtailwin*100)/$i))
+        percent=`awk "BEGIN {print $(($headtailwin*100))/$i}"`
         echo "HT Win Percent is : " $percent
 }
 
 function winTailHead() {
-        percent=$(( ($tailheadwin*100) / $i ))
+        percent=`awk "BEGIN {print $(($tailheadwin*100))/$i}"`
         echo "TH Win Percent is : " $percent
 }
 
@@ -36,7 +36,7 @@ do
 		echo "Head Win"
 		((headwin++))
 
-	elif [[ $flip -eq $tails && $flip -eq $tails ]]
+	elif [[ $flip -eq $tails && $flip1 -eq $tails ]]
 	then
 		val="T"
 		val1="T"
