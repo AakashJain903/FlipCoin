@@ -62,8 +62,6 @@ do
 
 
         dictCoinDoublet["$i"]=$val$val1
-
-
 done
 
 echo "Flipping Coin Store the doublet Combination......."
