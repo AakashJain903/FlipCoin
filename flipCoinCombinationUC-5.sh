@@ -210,6 +210,7 @@ echo "Flipping Coin Store the triplet Combination......."
 echo ${dictCoinTriplet[@]}
 echo "Sorting Percent of singlet, doublet & triplet......."
 
+function sortingAllCombination(){
 winH
 winT
 winHH
@@ -224,5 +225,6 @@ winTHH
 winTTH
 winTHT
 winHHT
+}
 
-
+sortingAllCombination | sort -n -k6
